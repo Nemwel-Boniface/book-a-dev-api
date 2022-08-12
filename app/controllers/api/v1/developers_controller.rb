@@ -8,4 +8,20 @@ class Api::V1::DevelopersController < ApplicationController
       render json: @developers.errors, status: :bad_request
     end
   end
+
+  def create
+    developer = Developer.new(developers_params)
+
+    if developer.save
+      render json: {status: "SUCCESS", message: "Developer created succesfully!", data: developer}, status: :created
+    else
+      render json: developer.errors, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def developers_params
+    params.require(:developer).permit(:name, :icon, :location, :email, :tech_stack, :experience, :bio, :hourly_rate)
+  end
 end
