@@ -1,9 +1,10 @@
 class Api::V1::DevelopersController < ApplicationController
   def index
-    @developers = Developer.all 
-    
+    @developers = Developer.all
+
     if @developers
-      render json: {status: "SUCCESS", message: "Retrieved all the developers correctly!", data: @developers}, status: :ok
+      render json: { status: 'SUCCESS', message: 'Retrieved all the developers correctly!', data: @developers },
+             status: :ok
     else
       render json: @developers.errors, status: :bad_request
     end
@@ -13,7 +14,7 @@ class Api::V1::DevelopersController < ApplicationController
     developer = Developer.new(developers_params)
 
     if developer.save
-      render json: {status: "SUCCESS", message: "Developer created succesfully!", data: developer}, status: :created
+      render json: { status: 'SUCCESS', message: 'Developer created succesfully!', data: developer }, status: :created
     else
       render json: developer.errors, status: :unprocessable_entity
     end
@@ -23,23 +24,21 @@ class Api::V1::DevelopersController < ApplicationController
     developer = Developer.find(params[:id])
 
     if developer
-      render json: {data: developer}, status: :ok 
+      render json: { data: developer }, status: :ok
     else
-      render json: {message: "Developer cannot be found!"}, status: :bad_request
+      render json: { message: 'Developer cannot be found!' }, status: :bad_request
     end
   end
-
 
   def destroy
     developer = Developer.find(params[:id])
 
     if developer.destroy!
-      render json: {message: "Developer was deleted successfully!"}, status: :ok
+      render json: { message: 'Developer was deleted successfully!' }, status: :ok
     else
-      render json: {message: "Developer does not exist!"}, status: :bad_request 
+      render json: { message: 'Developer does not exist!' }, status: :bad_request
     end
   end
-
 
   private
 
