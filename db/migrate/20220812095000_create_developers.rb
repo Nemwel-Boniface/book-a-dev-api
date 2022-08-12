@@ -8,7 +8,7 @@ class CreateDevelopers < ActiveRecord::Migration[7.0]
       t.integer :experience
       t.text :bio
       t.integer :hourly_rate
-      t.string :tech_stack
+      t.string :tech_stack, array: true, default: [] 
 
       t.timestamps
     end
