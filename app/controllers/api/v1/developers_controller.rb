@@ -29,6 +29,18 @@ class Api::V1::DevelopersController < ApplicationController
     end
   end
 
+
+  def destroy
+    developer = Developer.find(params[:id])
+
+    if developer.destroy!
+      render json: {message: "Developer was deleted successfully!"}, status: :ok
+    else
+      render json: {message: "Developer does not exist!"}, status: :bad_request 
+    end
+  end
+
+
   private
 
   def developers_params
