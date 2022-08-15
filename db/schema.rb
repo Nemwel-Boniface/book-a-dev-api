@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_12_095000) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_15_084251) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,13 +18,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_12_095000) do
     t.string "name"
     t.string "icon"
     t.string "location"
-    t.string "email"
     t.integer "experience"
     t.text "bio"
     t.integer "hourly_rate"
-    t.string "tech_stack", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "tech_stack"
+    t.string "github"
+    t.string "twitter"
+    t.string "linkedin"
+    t.string "title"
+    t.boolean "available", default: false
   end
 
 end
