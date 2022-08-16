@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_16_155224) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_16_172145) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_16_155224) do
     t.string "linkedin"
     t.string "title"
     t.boolean "available", default: false
+    t.integer "phone"
   end
 
   create_table "reservations", force: :cascade do |t|

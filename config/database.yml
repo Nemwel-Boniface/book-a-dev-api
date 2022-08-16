@@ -26,8 +26,8 @@ development:
   database: book_a_dev_api_development
   # host: localhost
   # port: 5432
-  username: nemwel
-  password: root
+  username: isaka
+  password: lumato
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -63,8 +63,8 @@ test:
   database: book_a_dev_api_test
   #   host: localhost
   # port: 5432
-  username: nemwel
-  password: root
+  username: isaka
+  password: lumato
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
