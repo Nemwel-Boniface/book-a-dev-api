@@ -10,6 +10,26 @@ class Api::V1::ReservationsController < ApplicationController
     end
   end
 
+
+  def create
+    reservation = Reservation.new(reservations_params)
+
+    if reservation.save
+      render json: { status: 'SUCCESS', message: 'reservation created succesfully!', data: reservation }, status: :created
+    else
+      render json: reservation.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    reservation = Reservation.find(params[:id])
+
+    if reservation.destroy!
+      render json: { message: 'reservation was deleted successfully!' }, status: :ok
+    else
+      render json: { message: 'reservation does not exist!' }, status: :bad_request
+    end
+
   private
 
   def reservations_params
