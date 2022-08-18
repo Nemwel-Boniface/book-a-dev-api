@@ -73,6 +73,27 @@ RSpec.describe 'api/v1/developers', type: :request do
     patch('update developer') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'
+        parameter name: :developer, in: :body, schema: {
+          type: :object,
+          properties: {
+            name: { type: :string },
+            icon: { type: :string },
+            location: { type: :string },
+            experience: { type: :integer },
+            bio: { type: :text },
+            hourly_rate: { type: :integer },
+            tech_stack: { type: :string },
+            github: { type: :string },
+            twitter: { type: :string },
+            linkedin: { type: :string },
+            available: { type: :boolean },
+            title: { type: :string },
+            phone: { type: :integer },
+            user_id: { type: :string },
+          },
+          required: %w[name icon location experience bio hourly_rate tech_stack github twitter linkedin available title phone user_id]
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -88,6 +109,27 @@ RSpec.describe 'api/v1/developers', type: :request do
     put('update developer') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'
+        parameter name: :developer, in: :body, schema: {
+          type: :object,
+          properties: {
+            name: { type: :string },
+            icon: { type: :string },
+            location: { type: :string },
+            experience: { type: :integer },
+            bio: { type: :text },
+            hourly_rate: { type: :integer },
+            tech_stack: { type: :string },
+            github: { type: :string },
+            twitter: { type: :string },
+            linkedin: { type: :string },
+            available: { type: :boolean },
+            title: { type: :string },
+            phone: { type: :integer },
+            user_id: { type: :string },
+          },
+          required: %w[name icon location experience bio hourly_rate tech_stack github twitter linkedin available title phone user_id]
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
