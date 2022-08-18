@@ -11,4 +11,7 @@ class Developer < ApplicationRecord
   validates :linkedin, presence: true
   validates :available, presence: true
   validates :title, presence: true
+  validates :phone, presence: true
+  has_many :reservations
+  belongs_to :user
 end

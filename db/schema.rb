@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_15_144339) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_17_094400) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +29,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_15_144339) do
     t.string "linkedin"
     t.string "title"
     t.boolean "available", default: false
+    t.integer "phone"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_developers_on_user_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "developer_id"
+    t.index ["developer_id"], name: "index_reservations_on_developer_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,4 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_15_144339) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "developers", "users"
+  add_foreign_key "reservations", "developers"
+  add_foreign_key "reservations", "users"
 end

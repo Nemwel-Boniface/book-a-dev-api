@@ -1,5 +1,5 @@
 class Api::V1::DevelopersController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   def index
     @developers = Developer.all
 
@@ -44,6 +44,7 @@ class Api::V1::DevelopersController < ApplicationController
   private
 
   def developers_params
-    params.require(:developer).permit(:name, :icon, :location, :email, :tech_stack, :experience, :bio, :hourly_rate)
+    params.require(:developer).permit(:name, :icon, :location, :tech_stack, :experience, :bio, :hourly_rate, :linkedin,
+                                      :github, :twitter, :phone, :title, :available)
   end
 end
