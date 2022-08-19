@@ -21,8 +21,8 @@ RSpec.describe 'api/v1/reservations', type: :request do
         parameter name: :reservation, in: :body, schema: {
           type: :object,
           properties: {
-            start_date: { type: :datetime },
-            end_date: { type: :datetime },
+            start_date: { type: :string },
+            end_date: { type: :string },
             location: { type: :string },
             developer_id: { type: :integer },
             user_id: { type: :integer }
@@ -68,8 +68,8 @@ RSpec.describe 'api/v1/reservations', type: :request do
         parameter name: :reservation, in: :body, schema: {
           type: :object,
           properties: {
-            start_date: { type: :datetime },
-            end_date: { type: :datetime },
+            start_date: { type: :string },
+            end_date: { type: :string },
             location: { type: :string },
             developer_id: { type: :integer },
             user_id: { type: :integer }
@@ -95,8 +95,8 @@ RSpec.describe 'api/v1/reservations', type: :request do
         parameter name: :reservation, in: :body, schema: {
           type: :object,
           properties: {
-            start_date: { type: :datetime },
-            end_date: { type: :datetime },
+            start_date: { type: :string },
+            end_date: { type: :string },
             location: { type: :string },
             developer_id: { type: :integer },
             user_id: { type: :integer }

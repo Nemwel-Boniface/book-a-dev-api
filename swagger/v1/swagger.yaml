@@ -12,9 +12,59 @@ paths:
           description: successful
     post:
       summary: create developer
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                icon:
+                  type: string
+                location:
+                  type: string
+                experience:
+                  type: integer
+                bio:
+                  type: string
+                hourly_rate:
+                  type: integer
+                tech_stack:
+                  type: string
+                github:
+                  type: string
+                twitter:
+                  type: string
+                linkedin:
+                  type: string
+                available:
+                  type: boolean
+                title:
+                  type: string
+                phone:
+                  type: integer
+                user_id:
+                  type: string
+              required:
+              - name
+              - icon
+              - location
+              - experience
+              - bio
+              - hourly_rate
+              - tech_stack
+              - github
+              - twitter
+              - linkedin
+              - available
+              - title
+              - phone
+              - user_id
   "/api/v1/developers/{id}":
     parameters:
     - name: id
@@ -30,14 +80,114 @@ paths:
           description: successful
     patch:
       summary: update developer
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                icon:
+                  type: string
+                location:
+                  type: string
+                experience:
+                  type: integer
+                bio:
+                  type: string
+                hourly_rate:
+                  type: integer
+                tech_stack:
+                  type: string
+                github:
+                  type: string
+                twitter:
+                  type: string
+                linkedin:
+                  type: string
+                available:
+                  type: boolean
+                title:
+                  type: string
+                phone:
+                  type: integer
+                user_id:
+                  type: string
+              required:
+              - name
+              - icon
+              - location
+              - experience
+              - bio
+              - hourly_rate
+              - tech_stack
+              - github
+              - twitter
+              - linkedin
+              - available
+              - title
+              - phone
+              - user_id
     put:
       summary: update developer
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                icon:
+                  type: string
+                location:
+                  type: string
+                experience:
+                  type: integer
+                bio:
+                  type: text
+                hourly_rate:
+                  type: integer
+                tech_stack:
+                  type: string
+                github:
+                  type: string
+                twitter:
+                  type: string
+                linkedin:
+                  type: string
+                available:
+                  type: boolean
+                title:
+                  type: string
+                phone:
+                  type: integer
+                user_id:
+                  type: string
+              required:
+              - name
+              - icon
+              - location
+              - experience
+              - bio
+              - hourly_rate
+              - tech_stack
+              - github
+              - twitter
+              - linkedin
+              - available
+              - title
+              - phone
+              - user_id
     delete:
       summary: delete developer
       responses:
@@ -51,9 +201,32 @@ paths:
           description: successful
     post:
       summary: create reservation
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start_date:
+                  type: string
+                end_date:
+                  type: string
+                location:
+                  type: string
+                developer_id:
+                  type: integer
+                user_id:
+                  type: integer
+              required:
+              - start_date
+              - end_date
+              - location
+              - developer_id
+              - user_id
   "/api/v1/reservations/{id}":
     parameters:
     - name: id
@@ -69,14 +242,60 @@ paths:
           description: successful
     patch:
       summary: update reservation
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start_date:
+                  type: string
+                end_date:
+                  type: string
+                location:
+                  type: string
+                developer_id:
+                  type: integer
+                user_id:
+                  type: integer
+              required:
+              - start_date
+              - end_date
+              - location
+              - developer_id
+              - user_id
     put:
       summary: update reservation
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start_date:
+                  type: string
+                end_date:
+                  type: string
+                location:
+                  type: string
+                developer_id:
+                  type: integer
+                user_id:
+                  type: integer
+              required:
+              - start_date
+              - end_date
+              - location
+              - developer_id
+              - user_id
     delete:
       summary: delete reservation
       responses:
