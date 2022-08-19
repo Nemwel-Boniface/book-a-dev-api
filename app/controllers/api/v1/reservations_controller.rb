@@ -1,6 +1,7 @@
 class Api::V1::ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    @user = User.find(params[:user_id])
+    @reservations = @user.reservations
 
     if @reservations
       render json: { status: 'SUCCESS', message: 'Retrieved all the reservations correctly!', data: @reservations },

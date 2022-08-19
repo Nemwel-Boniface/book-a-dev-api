@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   validates :username, presence: true
 
-  has_many :reservations, through: :developers
+  has_many :reservations
   has_many :developers
 end

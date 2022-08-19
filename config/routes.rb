@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :developers
-      resources :reservations
+      resources :users do
+        resources :reservations
+      end
     end
   end
 end
