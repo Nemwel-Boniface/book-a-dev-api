@@ -9,8 +9,7 @@ class Developer < ApplicationRecord
   validates :github, presence: true
   validates :twitter, presence: true
   validates :linkedin, presence: true
-  # validates :available, presence: true
-  validates :available, inclusion: { in: [ true, false ] }
+  validates :available, inclusion: { in: [true, false] }
   validates :title, presence: true
   validates :phone, presence: true
   has_many :reservations
