@@ -25,7 +25,7 @@ RSpec.describe 'api/v1/reservations', type: :request do
             end_date: { type: :datetime },
             location: { type: :string },
             developer_id: { type: :integer },
-            user_id: { type: :integer },
+            user_id: { type: :integer }
           },
           required: %w[start_date end_date location developer_id user_id]
         }
@@ -72,7 +72,7 @@ RSpec.describe 'api/v1/reservations', type: :request do
             end_date: { type: :datetime },
             location: { type: :string },
             developer_id: { type: :integer },
-            user_id: { type: :integer },
+            user_id: { type: :integer }
           },
           required: %w[start_date end_date location developer_id user_id]
         }
@@ -99,11 +99,10 @@ RSpec.describe 'api/v1/reservations', type: :request do
             end_date: { type: :datetime },
             location: { type: :string },
             developer_id: { type: :integer },
-            user_id: { type: :integer },
+            user_id: { type: :integer }
           },
           required: %w[start_date end_date location developer_id user_id]
         }
-
 
         after do |example|
           example.metadata[:response][:content] = {

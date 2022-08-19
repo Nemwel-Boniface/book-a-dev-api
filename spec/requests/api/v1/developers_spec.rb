@@ -34,9 +34,10 @@ RSpec.describe 'api/v1/developers', type: :request do
             available: { type: :boolean },
             title: { type: :string },
             phone: { type: :integer },
-            user_id: { type: :string },
+            user_id: { type: :string }
           },
-          required: %w[name icon location experience bio hourly_rate tech_stack github twitter linkedin available title phone user_id]
+          required: %w[name icon location experience bio hourly_rate tech_stack github twitter linkedin available title
+                       phone user_id]
         }
 
         after do |example|
@@ -90,9 +91,10 @@ RSpec.describe 'api/v1/developers', type: :request do
             available: { type: :boolean },
             title: { type: :string },
             phone: { type: :integer },
-            user_id: { type: :string },
+            user_id: { type: :string }
           },
-          required: %w[name icon location experience bio hourly_rate tech_stack github twitter linkedin available title phone user_id]
+          required: %w[name icon location experience bio hourly_rate tech_stack github twitter linkedin available title
+                       phone user_id]
         }
 
         after do |example|
@@ -126,9 +128,10 @@ RSpec.describe 'api/v1/developers', type: :request do
             available: { type: :boolean },
             title: { type: :string },
             phone: { type: :integer },
-            user_id: { type: :string },
+            user_id: { type: :string }
           },
-          required: %w[name icon location experience bio hourly_rate tech_stack github twitter linkedin available title phone user_id]
+          required: %w[name icon location experience bio hourly_rate tech_stack github twitter linkedin available title
+                       phone user_id]
         }
 
         after do |example|
