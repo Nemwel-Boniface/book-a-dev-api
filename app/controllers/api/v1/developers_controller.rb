@@ -45,6 +45,6 @@ class Api::V1::DevelopersController < ApplicationController
 
   def developers_params
     params.require(:developer).permit(:name, :icon, :location, :tech_stack, :experience, :bio, :hourly_rate, :linkedin,
-                                      :github, :twitter, :phone, :title, :available)
+                                      :github, :twitter, :phone, :title, :available, :user_id)
   end
 end
