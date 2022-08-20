@@ -18,5 +18,9 @@ Developer.create!([
 
 Reservation.create!([
   { start_date: "2020-04-23", end_date: "2025-05-13", location: "mavurunza", developer_id: 2, user_id: 1 },
+  { start_date: "2020-04-23", end_date: "2025-05-13", location: "mavurunza", developer_id: 2, user_id: 1 },
+
+  { start_date: "2020-04-23", end_date: "2025-05-13", location: "mavurunza", developer_id: 2, user_id: 1 },
+
   { start_date: "2021-02-24", end_date: "2024-05-11", location: "kigogo", developer_id: 1, user_id: 2 },
 ])
