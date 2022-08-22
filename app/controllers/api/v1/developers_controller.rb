@@ -48,3 +48,5 @@ class Api::V1::DevelopersController < ApplicationController
                                       :github, :twitter, :phone, :title, :available, :user_id)
   end
 end
+
+# enhancements had to add
