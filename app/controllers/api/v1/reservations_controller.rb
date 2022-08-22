@@ -16,7 +16,7 @@ class Api::V1::ReservationsController < ApplicationController
 
     if reservation.save
       reservation = Reservation.find(reservation.id)
-      render json: { status: 'SUCCESS', message: 'reservation created succesfully!', data: reservation.as_json(include: :developer)  },
+      render json: { status: 'SUCCESS', message: 'reservation created succesfully!', data: reservation.as_json(include: :developer) },
              status: :created
     else
       render json: reservation.errors, status: :unprocessable_entity
