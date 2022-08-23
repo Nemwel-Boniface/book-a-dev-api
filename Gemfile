@@ -6,15 +6,11 @@ ruby '3.0.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 
-gem 'cancancan', '~> 3.4'
-
 gem 'rswag'
 
 gem 'rspec-rails', '>= 3.9.0'
 
 gem 'rack-cors', '~> 1.1', '>= 1.1.1'
-
-gem 'devise_token_auth', git: 'https://github.com/lynndylanhurley/devise_token_auth'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
