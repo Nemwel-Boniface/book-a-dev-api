@@ -1,6 +1,6 @@
 # Book-a-dev-api
 
-This repository is a Ruby on Rails developed backend API only application named "book-a-dev-api". The purpose of the project is to automate the acquisition of technical talents by having a central location where some highly skilled developers can advertise themselves. The Application allows an authenticated user to log in to the system, get a list of all available developers who can be booked for a specified period of time and amount per hour. The developers' bio has the contact details, location, pricing per hour of the lawyer from which a user gets more insights. It also has dedicated pages to see a user's reservations and a reserve form. The project also has a Front end repository which can be viewed [here (book-a-dev-ui)](https://github.com/maxthestranger/book-a-dev-api)
+This repository is a Ruby on Rails developed backend API only application named "book-a-dev-api". The purpose of the project is to automate the acquisition of technical talents by having a central location where some highly skilled developers can advertise themselves. The Application allows an authenticated user to log in to the system, get a list of all available developers who can be booked for a specified period of time and amount per hour. The developers' bio has the contact details, location, pricing per hour of the lawyer from which a user gets more insights. It also has dedicated pages to see a user's reservations and a reserve form. The project also has a Front end repository which can be viewed [here (book-a-dev-ui)](https://github.com/maxthestranger/book-a-dev-ui)
 
 
 #### Project structure:
@@ -30,10 +30,10 @@ Enjoy!
 - Definitely lots of love :heart: and dedication :muscle:
 
 ## Link to API Documentation
-To view the available endpoints visit our [API documentation](https://book-a-dev-api.herokuapp.com/api-docs/index.html)
+To view the available endpoints visit our ```https://book-a-dev-api.herokuapp.com/api-docs/index.html```
 
 ## Link to FrontEnd app 
-[click here](https://book-a-dev-api.herokuapp.com)
+The projects Front end can be found [here](https://github.com/maxthestranger/book-a-dev-ui)
 
 
 ## Hosting services
@@ -128,9 +128,6 @@ The project base URL is ```https://book-a-dev-api.herokuapp.com/```. The API all
 
 
 
-
-
-
 ## API documentaion
 
 The api endpoints can be found by putting the following in the browser url
@@ -147,19 +144,25 @@ rspec
 
 - GitHub: [@Nemwel-Boniface ](https://github.com/Nemwel-Boniface)
 - Twitter: [@nemwel_bonie](https://twitter.com/nemwel_bonie)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/nemwel-nyandoro-aa1b2620b/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/nemwel-nyandoro/)
 
 👤 **Isaka**
 
 - GitHub: [@Isaka Lumato](https://github.com/isaka-lumato)
+- Twitter: [@lumato_isaac](https://twitter.com/lumato_isaac)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/isaka-william-90773020b/)
 
 
 👤 **Emmanuel Allan**
 - GitHub: [@Emmanuel Allan](https://github.com/maxthestranger)
+- Twitter: [@maxthestranger](https://twitter.com/maxthestranger)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/maxthestranger/)
 
 
 👤 **Ciragane Nicole**
 - GitHub: [@Ciragane Nicole](https://github.com/ciraganenicole)
+- Twitter: [@ciraganeN](https://twitter.com/CiraganeN)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ciraganenicole/)
 
 
 ## 🤝 Contributing
