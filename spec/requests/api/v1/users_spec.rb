@@ -20,6 +20,17 @@ RSpec.describe 'api/v1/users', type: :request do
 
     post('create user') do
       response(200, 'successful') do
+        consumes 'application/json'
+        parameter name: :user, in: :body, schema: {
+          type: :object,
+          properties: {
+            email: { type: :string },
+            password: { type: :string },
+            name: { type: :string },
+            username: { type: :string }
+          },
+          required: %w[email password name username]
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -102,6 +113,15 @@ RSpec.describe 'api/v1/users', type: :request do
 
     post('login user') do
       response(200, 'successful') do
+        consumes 'application/json'
+        parameter name: :user, in: :body, schema: {
+          type: :object,
+          properties: {
+            email: { type: :string },
+            password: { type: :string }
+          },
+          required: %w[email password]
+        }
 
         after do |example|
           example.metadata[:response][:content] = {

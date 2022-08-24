@@ -309,9 +309,29 @@ paths:
           description: successful
     post:
       summary: create user
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+                name:
+                  type: string
+                username:
+                  type: string
+              required:
+              - email
+              - password
+              - name
+              - username
   "/api/v1/users/{id}":
     parameters:
     - name: id
@@ -343,9 +363,23 @@ paths:
   "/api/v1/login":
     post:
       summary: login user
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - email
+              - password
 servers:
 - url: https://{defaultHost}
   variables:
