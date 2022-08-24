@@ -8,7 +8,14 @@ class CreateDevelopers < ActiveRecord::Migration[7.0]
       t.integer :experience
       t.text :bio
       t.integer :hourly_rate
-      t.string :tech_stack, array: true, default: [] 
+      t.string :tech_stack
+      t.string :phone
+      t.string :github
+      t.string :twitter
+      t.string :linkedin
+      t.string :title
+      t.boolean :available
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
