@@ -126,13 +126,6 @@ The project base URL is ```https://book-a-dev-api.herokuapp.com/```. The API all
    }
    ```
 
-
-
-## API documentaion
-
-The api endpoints can be found by putting the following in the browser url
-
-
 ### Run tests
 ```
 rspec
