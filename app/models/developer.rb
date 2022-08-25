@@ -12,6 +12,6 @@ class Developer < ApplicationRecord
   validates :available, inclusion: { in: [true, false] }
   validates :title, presence: true
   validates :phone, presence: true
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
   belongs_to :user
 end
