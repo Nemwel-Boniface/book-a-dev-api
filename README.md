@@ -10,13 +10,10 @@ For this project, we are a team of 4 awesome members namely, [Isaka William](htt
 To succesfully execute the project, we subdivided ourselves into two groups having Emmanuel and Nicole working on the Front End and Isaac and Nemwel working on the back end.
 
 
-To do this succesfully we created a Kanban board and subdivided the tasks among ourselves and executed the tasks according to the plan that we had. The kanban can be viewed [here](https://github.com/users/maxthestranger/projects/4).
+To do this succesfully we created a Kanban board and subdivided the tasks among ourselves and executed the tasks according to the plan that we had. The kanban can be viewed [here](https://github.com/users/maxthestranger/projects/4). To view the link to the kanban screenshot as it was originally, that can be viewed [here](https://user-images.githubusercontent.com/29913493/184120557-32a37578-4cab-498a-af8c-684a668965fe.png)
 
 
 Enjoy!
-
-## Project ERD
- (To be updated)
 
 
 ## Built With
