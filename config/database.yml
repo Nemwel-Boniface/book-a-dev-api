@@ -87,7 +87,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: book_a_dev_api_production
   username: book_a_dev_api
   password: <%= ENV["BOOK_A_DEV_API_DATABASE_PASSWORD"] %>
